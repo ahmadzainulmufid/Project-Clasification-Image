@@ -17,3 +17,11 @@ Gunakan Python:
 import tensorflow.lite as tflite
 interpreter = tflite.Interpreter(model_path="tflite/model.tflite")
 interpreter.allocate_tensors()
+
+### TensorFlow JS
+Gunakan Python:
+```javascript
+const model = await tf.loadLayersModel('tfjs_model/model.json');
+const input = tf.randomUniform([1, 150, 150, 3]);
+const output = model.predict(input);
+output.print();
